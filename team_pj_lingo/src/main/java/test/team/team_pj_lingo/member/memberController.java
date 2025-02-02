@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.controller;
+package test.team.team_pj_lingo.member;
 
 import java.io.IOException;
 
@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import test.team.team_pj_lingo.service.MemberServiceImpl;
 
 @Controller
 public class memberController {
@@ -84,7 +82,7 @@ public class memberController {
 		throws ServletException, IOException {
 		logger.info("<<< url ==>  /mypage.do >>>");
 		
-		
+		service.mypage(request, response, model);
 		
 		return "member/mypage/mypage";
 	}

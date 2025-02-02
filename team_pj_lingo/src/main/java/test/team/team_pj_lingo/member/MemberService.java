@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.service;
+package test.team.team_pj_lingo.member;
 
 import java.io.IOException;
 
@@ -22,5 +22,11 @@ public interface MemberService {
 	// 로그인 처리 / 회원정보 인증(수정, 탈퇴)
 	public void loginAction(HttpServletRequest request, HttpServletResponse response, Model model) 
 			throws ServletException, IOException;
+	
+	// 마이페이지
+		public void mypage(HttpServletRequest request, HttpServletResponse response, Model model) 
+				throws ServletException, IOException;
+		
+	
 	
 }
