@@ -16,5 +16,7 @@ public interface MemberDAO {
 	
 	// 마이페이지
     public MemberDTO mypage(String mem_id);
+    
+    
 	
 }

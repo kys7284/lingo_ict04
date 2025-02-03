@@ -49,7 +49,7 @@ public class MemberServiceImpl implements MemberService {
 		String address1 = request.getParameter("sample6_address");
 		String address2 = request.getParameter("sample6_extraAddress");
 		String address3 = request.getParameter("sample6_detailAddress");
-		String mem_address = address1+" "+address2+" "+address3;
+		String mem_address = address1+"-"+address2+"-"+address3;
 		dto.setMem_address(mem_address);
 		
 		int insertCnt = dao.JoinAction(dto);
@@ -112,6 +112,7 @@ public class MemberServiceImpl implements MemberService {
 		model.addAttribute("dto", dto);
 		
 	}
+
 
 
 }

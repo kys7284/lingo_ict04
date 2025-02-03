@@ -64,7 +64,7 @@
 									<tr>
 										<th> * 비밀번호 </th>
 										<td> 
-											<input type="password" class="input" id="mem_pwd" name="mem_pwd" size="20" placeholder="공백없이 20자이내로 작성" required >
+											<input type="password" class="input" id="mem_pwd" name="mem_pwd" size="20" placeholder="영숫자 8~20자 이내" required >
 										</td>
 									</tr>
 									

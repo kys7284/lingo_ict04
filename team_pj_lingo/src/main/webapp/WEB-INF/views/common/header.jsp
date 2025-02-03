@@ -101,6 +101,7 @@
                 </c:if>
                 <c:if test="${sessionScope.sessionId != null}">
                 	<a href="${path}/mypage.do" class="nav-item nav-link">마이페이지</a>
+                	<a href="${path}/logout.do" class="nav-item nav-link">로그아웃</a>
                 </c:if>	
             </div>
             <a href="${path}/join.do" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">회원가입<i class="fa fa-arrow-right ms-3"></i></a>

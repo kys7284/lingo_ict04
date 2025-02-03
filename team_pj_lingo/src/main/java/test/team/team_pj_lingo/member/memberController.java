@@ -97,7 +97,16 @@ public class memberController {
 		
 		return "member/mypage/mypageUpdate";
 	}
-	
+
+	// 로그아웃
+	@RequestMapping("/logout.do")
+	public String logout(HttpServletRequest request, HttpServletResponse response, Model model) 
+		throws ServletException, IOException {
+		logger.info("<<< url ==>  /logout.do >>>");
+		
+		request.getSession().invalidate();
+		return "common/main";
+	}
 	
 	
 	
