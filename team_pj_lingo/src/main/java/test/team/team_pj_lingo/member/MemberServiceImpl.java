@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.service;
+package test.team.team_pj_lingo.member;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -13,10 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
-
-import test.team.team_pj_lingo.dao.MemberDAO;
-import test.team.team_pj_lingo.dao.MemberDAOImpl;
-import test.team.team_pj_lingo.dto.MemberDTO;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -53,7 +49,7 @@ public class MemberServiceImpl implements MemberService {
 		String address1 = request.getParameter("sample6_address");
 		String address2 = request.getParameter("sample6_extraAddress");
 		String address3 = request.getParameter("sample6_detailAddress");
-		String mem_address = address1+" "+address2+" "+address3;
+		String mem_address = address1+"-"+address2+"-"+address3;
 		dto.setMem_address(mem_address);
 		
 		int insertCnt = dao.JoinAction(dto);
@@ -103,6 +99,20 @@ public class MemberServiceImpl implements MemberService {
         
         //model.addAttribute("loginResult", selectCnt > 0 ? "success" : "fail");
     }
+
+    // 마이페이지
+	@Override
+	public void mypage(HttpServletRequest request, HttpServletResponse response, Model model)
+			throws ServletException, IOException {
+		
+		String mem_id = (String)request.getSession().getAttribute("sessionId");
+		
+		MemberDTO dto = dao.mypage(mem_id);
+		
+		model.addAttribute("dto", dto);
+		
+	}
+
 
 
 }

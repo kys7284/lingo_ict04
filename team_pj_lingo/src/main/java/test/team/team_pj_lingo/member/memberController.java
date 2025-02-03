@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.controller;
+package test.team.team_pj_lingo.member;
 
 import java.io.IOException;
 
@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import test.team.team_pj_lingo.service.MemberServiceImpl;
 
 @Controller
 public class memberController {
@@ -84,10 +82,37 @@ public class memberController {
 		throws ServletException, IOException {
 		logger.info("<<< url ==>  /mypage.do >>>");
 		
-		
+		service.mypage(request, response, model);
 		
 		return "member/mypage/mypage";
 	}
+	
+	// 회원정보수정 화면
+	@RequestMapping("/mypageUpdate.do")
+	public String mypageUpdate(HttpServletRequest request, HttpServletResponse response, Model model) 
+		throws ServletException, IOException {
+		logger.info("<<< url ==>  /mypageUpdate.do >>>");
+		
+		service.mypage(request, response, model);
+		
+		return "member/mypage/mypageUpdate";
+	}
+
+	// 로그아웃
+	@RequestMapping("/logout.do")
+	public String logout(HttpServletRequest request, HttpServletResponse response, Model model) 
+		throws ServletException, IOException {
+		logger.info("<<< url ==>  /logout.do >>>");
+		
+		request.getSession().invalidate();
+		return "common/main";
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 }

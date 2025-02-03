@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.dto;
+package test.team.team_pj_lingo.member;
 
 import java.sql.Date;
 import java.sql.Timestamp;

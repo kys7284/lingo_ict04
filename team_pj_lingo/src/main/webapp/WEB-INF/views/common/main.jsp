@@ -55,7 +55,7 @@
                                 <h4 class="text-primary text-uppercase mb-3 animated slideInDown">언어로 인한 불편함 없이</h4>
                                 <h3 class="display-3 text-white animated slideInDown">다문화가족을 위한 쉽고 빠른 번역서비스</h3>
                                 <h4 class="text-light text-uppercase mb-3 animated slideInDown">언제든지 도움을 드립니다!</h4>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">가입하기<i class="fa fa-arrow-right ms-3"></i></a>
+                                <a href="${path}/join.do" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">가입하기<i class="fa fa-arrow-right ms-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                                 <h4 class="text-primary text-uppercase mb-3 animated slideInDown">언어로 인한 불편함 없이</h4>
                                 <h3 class="display-3 text-white animated slideInDown">다문화가족을 위한 쉽고 빠른 번역서비스</h3>
                                 <h4 class="text-light text-uppercase mb-3 animated slideInDown">언제든지 도움을 드립니다!</h4>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">가입하기<i class="fa fa-arrow-right ms-3"></i></a>
+                                <a href="${path}/join.do" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">가입하기<i class="fa fa-arrow-right ms-3"></i></a>
                             </div>
                         </div>
                     </div>

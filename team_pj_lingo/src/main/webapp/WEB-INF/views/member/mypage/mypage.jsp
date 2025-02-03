@@ -15,6 +15,10 @@ integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqrupt
 			location.href = "${path}/main.do";
 		});
 		
+		$("#updateBtn").click(function() {
+			location.href = "${path}/mypageUpdate.do"
+		})
+		
 		
 	});
 </script>
@@ -30,42 +34,42 @@ integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqrupt
 		<table class="table table-info table-bordered" align="center"  style="width:800px">
 			<tr align="center">
 				<th style="width: 20%">회원번호</th>
-				<td style="width: 30%">1</td>
+				<td style="width: 30%">${dto.mem_no}</td>
 				
 				<th style="width: 20%">아이디</th>
-				<td style="width: 30%">daeyoul1003</td>
+				<td style="width: 30%">${dto.mem_id}</td>
 			</tr>
 			
 		 	<tr align="center">
 				<th style="width: 20%">이름</th>
-				<td style="width: 30%">12</td>
+				<td style="width: 30%">${dto.mem_name}</td>
 				
 				<th style="width: 20%">국적</th>
-				<td style="width: 30%">12</td>
+				<td style="width: 30%">${dto.mem_country}</td>
 			</tr >
 			
 			<tr align="center">
 				<th style="width: 20%">생년월일</th>
-				<td style="width: 30%">1994년10월03일</td>
+				<td style="width: 30%">${dto.mem_birthday}</td>
 				
 				<th style="width: 20%">주소</th>
-				<td style="width: 30%">서울시 강남구</td>
+				<td style="width: 30%">${dto.mem_address}</td>
 			</tr>
 			
 			<tr align="center">
 				<th style="width: 20%">전화번호</th>
-				<td style="width: 30%">010-1234-1234</td>
+				<td style="width: 30%">${dto.mem_hp}</td>
 				
 				<th style="width: 20%">활동등급</th>
-				<td style="width: 30%">Diamond</td>
+				<td style="width: 30%">${dto.mem_rank}</td>
 			</tr>
 			
 			<tr align="center">
 				<th style="width: 20%">이메일</th>
-				<td style="width: 30%">dayoul222@nate.com</td>
+				<td style="width: 30%">${dto.mem_email}</td>
 				
 				<th style="width: 20%">가입일</th>
-				<td style="width: 30%">2025/1/1</td>
+				<td style="width: 30%">${dto.mem_regdate}</td>
 			</tr>
 			
 			<tr align="center">
@@ -74,13 +78,13 @@ integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqrupt
 			
 			<tr align="center">
 				<td colspan="4">
-				 	<textarea rows="10" cols="80" disabled style="pointer-events: none;"></textarea>
+				 	<textarea rows="10" cols="80" disabled style="pointer-events: none;" >${dto.mem_comment}</textarea>
 				</td>
 			</tr>
 			
 			<tr align="center">
 				<td colspan="4">
-					<input type="button" class="btn btn-outline-info" id="updateActionBtn" value="회원정보 수정"/>
+					<input type="button" class="btn btn-outline-info" id="updateBtn" value="회원정보 수정"/>
 					<input type="button" class="btn btn-outline-info" id="mainBtn" value="메인으로" />
 				</td>
 			</tr>
