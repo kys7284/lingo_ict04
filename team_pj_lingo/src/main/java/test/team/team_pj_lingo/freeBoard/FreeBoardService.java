@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.service.board;
+package test.team.team_pj_lingo.freeBoard;
 
 import java.io.IOException;
 

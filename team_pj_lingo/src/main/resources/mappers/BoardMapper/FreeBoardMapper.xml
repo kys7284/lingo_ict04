@@ -4,10 +4,10 @@
      "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
      
      
-<mapper namespace="test.team.team_pj_lingo.dao.board.FreeBoardDAO">
+<mapper namespace="test.team.team_pj_lingo.freeBoard.FreeBoardDAO">
 
 	<!-- 게시글목록 -->
-	<select id="freeBoardList" parameterType="java.util.Map" resultType="test.team.team_pj_lingo.dto.board.FreeBoardDTO">
+	<select id="freeBoardList" parameterType="java.util.Map" resultType="test.team.team_pj_lingo.freeBoard.FreeBoardDTO">
 		
 		<![CDATA[
 		SELECT FB_NUM, FB_TITLE, FB_CONTENT, FB_WRITER, FB_PASSWORD, FB_READCNT, FB_REGDATE, 
@@ -41,13 +41,13 @@
 	</update>
 	
 	<!-- 게시판 상세페이지 -->
-	<select id="freeBoardDetail" parameterType="int" resultType="test.team.team_pj_lingo.dto.board.FreeBoardDTO">
+	<select id="freeBoardDetail" parameterType="int" resultType="test.team.team_pj_lingo.freeBoard.FreeBoardDTO">
 		SELECT * FROM FREE_BOARD_TBL
  		 WHERE FB_NUM = #{FB_NUM}
 	</select>
 	
 	<!-- 게시글 작성처리 -->
-	<insert id="insertFreeBoard" parameterType="test.team.team_pj_lingo.dto.board.FreeBoardDTO">
+	<insert id="insertFreeBoard" parameterType="test.team.team_pj_lingo.freeBoard.FreeBoardDTO">
 		INSERT INTO FREE_BOARD_TBL (fb_num, fb_title, fb_content, fb_writer, fb_password, fb_readCnt, fb_regDate, fb_comment_count, fb_img)
 		VALUES((SELECT NVL(MAX(fb_num)+1, 1)FROM FREE_BOARD_TBL),#{fb_title} ,#{fb_content} ,#{fb_writer}, #{fb_password}, 0, sysdate, 0, #{fb_img})
 	</insert>

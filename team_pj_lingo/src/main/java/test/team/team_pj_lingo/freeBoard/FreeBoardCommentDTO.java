@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.dto.board;
+package test.team.team_pj_lingo.freeBoard;
 
 import java.sql.Date;
 

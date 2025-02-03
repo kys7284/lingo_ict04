@@ -1,10 +1,7 @@
-package test.team.team_pj_lingo.dao.board;
+package test.team.team_pj_lingo.freeBoard;
 
 import java.util.List;
 import java.util.Map;
-
-import test.team.team_pj_lingo.dto.board.FreeBoardCommentDTO;
-import test.team.team_pj_lingo.dto.board.FreeBoardDTO;
 
 public interface FreeBoardDAO {
 	

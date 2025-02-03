@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.service.board;
+package test.team.team_pj_lingo.freeBoard;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,8 +18,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import test.team.team_pj_lingo.dao.board.FreeBoardDAO;
-import test.team.team_pj_lingo.dto.board.FreeBoardDTO;
 import test.team.team_pj_lingo.page.Paging;
 
 @Service

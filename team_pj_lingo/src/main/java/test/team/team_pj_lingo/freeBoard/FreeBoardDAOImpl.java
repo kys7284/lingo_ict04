@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.dao.board;
+package test.team.team_pj_lingo.freeBoard;
 
 import java.util.List;
 import java.util.Map;
@@ -6,9 +6,6 @@ import java.util.Map;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import test.team.team_pj_lingo.dto.board.FreeBoardCommentDTO;
-import test.team.team_pj_lingo.dto.board.FreeBoardDTO;
 
 @Repository
 public class FreeBoardDAOImpl implements FreeBoardDAO{
@@ -21,7 +18,7 @@ public class FreeBoardDAOImpl implements FreeBoardDAO{
 	public List<FreeBoardDTO> freeBoardList(Map<String, Object> map) {
 		System.out.println("FreeBoardDAOImpl - freeBoardList()");
 		
-		List<FreeBoardDTO> list = sqlSession.selectList("test.team.team_pj_lingo.dao.board.FreeBoardDAO.freeBoardList", map);
+		List<FreeBoardDTO> list = sqlSession.selectList("test.team.team_pj_lingo.freeBoard.FreeBoardDAO.freeBoardList", map);
 		return list;
 	}
 
@@ -30,7 +27,7 @@ public class FreeBoardDAOImpl implements FreeBoardDAO{
 	public int boardCnt() {
 		System.out.println("FreeBoardDAOImpl - boardCnt()");
 		
-		int total = sqlSession.selectOne("test.team.team_pj_lingo.dao.board.FreeBoardDAO.boardCnt");
+		int total = sqlSession.selectOne("test.team.team_pj_lingo.freeBoard.FreeBoardDAO.boardCnt");
 		return total;
 	}
 
@@ -38,7 +35,7 @@ public class FreeBoardDAOImpl implements FreeBoardDAO{
 	@Override
 	public void plusReadCnt(int fb_num) {
 		System.out.println("FreeBoardDAOImpl - plusReadCnt()");
-		sqlSession.update("test.team.team_pj_lingo.dao.board.FreeBoardDAO.plusReadCnt", fb_num);
+		sqlSession.update("test.team.team_pj_lingo.freeBoard.FreeBoardDAO.plusReadCnt", fb_num);
 	}
 
 	// 게시글 상세페이지
@@ -46,7 +43,7 @@ public class FreeBoardDAOImpl implements FreeBoardDAO{
 	public FreeBoardDTO freeBoardDetail(int fb_num) {
 		System.out.println("FreeBoardDAOImpl - freeBoardDetail()");
 		
-		FreeBoardDTO dto = sqlSession.selectOne("test.team.team_pj_lingo.dao.board.FreeBoardDAO.freeBoardDetail", fb_num);
+		FreeBoardDTO dto = sqlSession.selectOne("test.team.team_pj_lingo.freeBoard.FreeBoardDAO.freeBoardDetail", fb_num);
 		return dto;
 	}
 
@@ -76,7 +73,7 @@ public class FreeBoardDAOImpl implements FreeBoardDAO{
 	public int insertFreeBoard(FreeBoardDTO dto) {
 		System.out.println("FreeBoardDAOImpl - insertFreeBoard()");
 		
-		int insertCnt = sqlSession.insert("test.team.team_pj_lingo.dao.board.FreeBoardDAO.insertFreeBoard", dto);
+		int insertCnt = sqlSession.insert("test.team.team_pj_lingo.freeBoard.FreeBoardDAO.insertFreeBoard", dto);
 		return insertCnt;
 	}
 

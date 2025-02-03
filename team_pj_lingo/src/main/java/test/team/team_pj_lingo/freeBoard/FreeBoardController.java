@@ -1,4 +1,4 @@
-package test.team.team_pj_lingo.controller.board;
+package test.team.team_pj_lingo.freeBoard;
 
 import java.io.IOException;
 
@@ -13,8 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-
-import test.team.team_pj_lingo.service.board.FreeBoardServiceImpl;
 
 
 @Controller
