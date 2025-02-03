@@ -15,6 +15,10 @@ integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqrupt
 			location.href = "${path}/main.do";
 		});
 		
+		$("#updateBtn").click(function() {
+			location.href = "${path}/mypageUpdate.do"
+		})
+		
 		
 	});
 </script>
@@ -80,7 +84,7 @@ integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqrupt
 			
 			<tr align="center">
 				<td colspan="4">
-					<input type="button" class="btn btn-outline-info" id="updateActionBtn" value="회원정보 수정"/>
+					<input type="button" class="btn btn-outline-info" id="updateBtn" value="회원정보 수정"/>
 					<input type="button" class="btn btn-outline-info" id="mainBtn" value="메인으로" />
 				</td>
 			</tr>

@@ -87,5 +87,23 @@ public class memberController {
 		return "member/mypage/mypage";
 	}
 	
+	// 회원정보수정 화면
+	@RequestMapping("/mypageUpdate.do")
+	public String mypageUpdate(HttpServletRequest request, HttpServletResponse response, Model model) 
+		throws ServletException, IOException {
+		logger.info("<<< url ==>  /mypageUpdate.do >>>");
+		
+		service.mypage(request, response, model);
+		
+		return "member/mypage/mypageUpdate";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
