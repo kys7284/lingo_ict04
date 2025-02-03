@@ -78,9 +78,9 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">게시판</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">자유게시판</a>
-                        <a href="#" class="dropdown-item">엔터테이먼트</a>
-                        <a href="#" class="dropdown-item">친구찾기</a>
+                        <a href="${path}/free_board_list.fb" class="dropdown-item">자유게시판</a>
+                        <a href="${path}/enter_board_list.eb" class="dropdown-item">엔터테인먼트</a>
+                        <a href="${path}/friend_board_list.ff" class="dropdown-item">친구찾기</a>
                     </div>
                 </div>
                 
